@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Karamush Scripts" commit="e7ff93783d45f8fc52ad8ce2586d68da2fd7e571">
+<index version="1" name="Karamush Scripts" commit="ad4cbe8a0505f1b4087b7c9d4ff70682eb647293">
+  <category name="Tracks">
+    <reapack name="Smooth Fader.lua" type="script" desc="Smooth Fader - Плавное подведение громкости трека после изменения">
+      <version name="1.0.0" author="Karamush" time="2026-05-25T16:24:30Z">
+        <source main="main">https://github.com/karamush/REAPER-ReaScripts/raw/ad4cbe8a0505f1b4087b7c9d4ff70682eb647293/Tracks/Smooth%20Fader.lua</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Tracks/LiveRecGroups">
     <reapack name="LiveRecGroups.lua" type="script" desc="LiveRecGroups">
       <metadata>
