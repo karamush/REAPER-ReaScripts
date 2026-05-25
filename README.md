@@ -139,9 +139,7 @@ python Tracks/LiveRecGroups/tools/generate_wrappers.py
 
 - [REAPER](https://www.reaper.fm/) — основная DAW
 - [ReaPack](https://reapack.com/) — менеджер пакетов для скриптов
-- [reaper-ws-proxy](https://github.com/karamush/reaper-ws-proxy) — веб-интерфейс для текстов и аккордов
-- [Форум REAPER](https://forum.reaper.fm/) — сообщество и поддержка
-
+- [reaper-ws-proxy](https://github.com/karamush/reaper-ws-proxy) — красивый и реактивный веб-интерфейс для текстов и аккордов
 
 ---
 
