@@ -37,11 +37,11 @@ jobs:
 
       - name: Commit generated wrappers
         uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "Auto-generate LiveRecGroups wrappers"
 
       - name: Generate index.xml
         run: reapack-index --commit --rebuild --output index.xml .
 
-      - name: Commit updated files
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: "Update ReaPack repository index"
+      - name: Push changes
+        run: git push
