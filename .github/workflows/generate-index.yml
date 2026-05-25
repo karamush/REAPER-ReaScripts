@@ -1,0 +1,47 @@
+name: Generate ReaPack index
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - name: Configure git
+        run: |-
+          git config user.name  'ReaPack Indexer'
+          git config user.email 'reapack-index@karamush.ru'
+      - name: Install Pandoc
+        run:  sudo apt-get install -yy pandoc
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Install reapack-index
+        run: gem install reapack-index
+
+      - name: Regenerate LiveRecGroups wrappers
+        run: python Tracks/LiveRecGroups/tools/generate_wrappers.py
+
+      - name: Commit generated wrappers
+        uses: stefanzweifel/git-auto-commit-action@v7
+
+      - name: Generate index.xml
+        run: reapack-index --commit --rebuild --output index.xml .
+
+      - name: Commit updated files
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "Update ReaPack repository index"

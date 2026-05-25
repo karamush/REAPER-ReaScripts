@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="Karamush Scripts" commit="0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b">
+  <category name="Tracks/LiveRecGroups">
+    <reapack name="LiveRecGroups.lua" type="script" desc="LiveRecGroups">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 LiveRecGroups provides track grouping features for live recording/streaming in REAPER.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="Karamush" time="2026-05-25T13:33:27Z">
+        <source main="main" file="Toggle Track Group 01 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2001%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 01 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2001%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 01 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2001%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 02 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2002%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 02 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2002%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 02 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2002%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 03 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2003%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 03 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2003%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 03 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2003%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 04 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2004%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 04 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2004%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 04 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2004%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 05 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2005%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 05 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2005%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 05 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2005%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 06 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2006%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 06 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2006%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 06 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2006%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 07 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2007%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 07 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2007%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 07 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2007%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 08 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2008%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 08 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2008%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 08 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2008%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 09 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2009%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 09 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2009%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 09 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2009%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 10 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2010%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 10 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2010%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 10 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2010%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 11 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2011%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 11 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2011%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 11 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2011%20(LiveRecGroups).lua</source>
+        <source main="main" file="Toggle Track Group 12 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Toggle%20Track%20Group%2012%20(LiveRecGroups).lua</source>
+        <source main="main" file="Save Selected Tracks To Group 12 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Save%20Selected%20Tracks%20To%20Group%2012%20(LiveRecGroups).lua</source>
+        <source main="main" file="Select Tracks In Group 12 (LiveRecGroups).lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/Select%20Tracks%20In%20Group%2012%20(LiveRecGroups).lua</source>
+        <source file="_lib/LiveRecGroups.lua">https://github.com/karamush/REAPER-ReaScripts/raw/0a771ac1bcdfb74ce4b1be2fe19b4ef1b6b4746b/Tracks/LiveRecGroups/_lib/LiveRecGroups.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <metadata>
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Karamush ReaScripts for {\field{\*\fldinst{HYPERLINK "http://reaper.fm"}}{\fldrslt{\ul
+Cockos REAPER
+}}}
+\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Installation\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Copy and paste this URL in Extensions > ReaPack > Import a repository:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \f1 https://github.com/karamush/REAPER-ReaScripts/raw/main/index.xml\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 TODO:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab \u1072?\u1074?\u1090?\u1086?\u1075?\u1077?\u1085?\u1077?\u1088?\u1072?\u1094?\u1080?\u1103? README\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab \u1085?\u1086?\u1088?\u1084?\u1072?\u1083?\u1100?\u1085?\u1086?\u1077? \u1086?\u1087?\u1080?\u1089?\u1072?\u1085?\u1080?\u1077? \u1082? \u1089?\u1082?\u1088?\u1080?\u1087?\u1090?\u1072?\u1084?\sa180\par}
+}
+]]></description>
+  </metadata>
+</index>
