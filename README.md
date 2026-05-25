@@ -1,11 +1,156 @@
-# Karamush ReaScripts for [Cockos REAPER](http://reaper.fm)
+# Karamush ReaScripts для [Cockos REAPER](https://www.reaper.fm/)
 
-## Installation
+🎛️ Коллекция удобных скриптов для автоматизации и расширения возможностей REAPER.
 
-Copy and paste this URL in Extensions > ReaPack > Import a repository:
+---
 
-    https://github.com/karamush/REAPER-ReaScripts/raw/main/index.xml
+## 📥 Установка
 
-TODO:
-- автогенерация README
-- нормальное описание к скриптам
+### Через ReaPack (рекомендуется)
+
+1. Откройте меню **Extensions** → **ReaPack** → **Browse packages**
+2. Нажмите **File** → **Import a repository**
+3. Вставьте URL:
+   ```
+   https://github.com/karamush/REAPER-ReaScripts/raw/main/index.xml
+   ```
+4. Нажмите **OK** и обновите пакеты
+
+### Ручная установка
+
+1. Скопируйте файлы `.lua` в папку скриптов REAPER, открыть которую можно через `Options -> Show REAPER resource path in explorer/finder...`, и в ней в директорию `Scripts`
+2. Перезагрузите REAPER (при установке через ReaPack перезагружать не нужно 😜)
+
+✅ **После этого в списке экшнов появятся все эти скрипты** 
+
+---
+
+## 📦 Доступные скрипты
+
+### 🎙️ LiveRecGroups — группировка треков для быстрого переключения режима записи
+
+Система для быстрого управления группами треков при живой записи или стриминге. Позволяет сохранять наборы треков в группы и включать/выключать запись на всех треках группы одной кнопкой.
+
+| Скрипт | Описание |
+|--------|----------|
+| `Toggle Track Group 01-12` | Включить/выключить запись на всех треках группы. Если треки в режиме мониторинга — переведёт в режим записи, и наоборот. |
+| `Save Selected Tracks To Group 01-12` | Сохранить текущие выделенные треки в указанную группу (если выделить ноль треков, группа будет очищена) |
+| `Select Tracks In Group 01-12` | Выделить все треки из указанной группы |
+
+**Пример использования:**
+1. Выделите несколько треков (например, барабаны)
+2. Запустите `Save Selected Tracks To Group 01`
+3. Во время сессии переключайте запись на этой группе кнопкой `Toggle Track Group 01`
+
+**Важно:**
+- Группы сохраняются **на уровень проекта** (не исчезают при закрытии REAPER)
+- Поддерживается до **12 групп** (количество можно менять, если нужно)
+- Треки сохраняются по GUID — не пропадут при переименовании или изменении порядка 🔥
+
+---
+
+### 🎚️ Smooth Fader — Плавное изменение громкости
+
+Скрипт сглаживает резкие изменения громкости трека. Когда вы перестаёте двигать фейдер, скрипт плавно подводит громкость к целевому значению за 1.5 секунды.
+
+| Параметр | Значение | Описание |
+|----------|----------|----------|
+| Таймаут | 2 мс | Пауза перед запуском сглаживания |
+| Длительность | 1.5 сек | Время плавного перехода |
+| Чувствительность | 0.0001 | Порог изменения громкости |
+
+**Как работает:**
+- Пока вы крутите фейдер — скрипт не вмешивается
+- После паузы в 2 мс запускается плавный переход
+- Если снова начать крутить — сглаживание прерывается
+- Зажатый **Shift** отключает сглаживание на время
+
+**Настройка:**
+Откройте файл `Smooth Fader.lua` и измените константы в начале:
+```lua
+TIMEOUT = 0.002        -- таймаут (сек)
+SMOOTH_DURATION = 1.5  -- длительность перехода (сек)
+EPSILON = 0.0001       -- чувствительность
+```
+
+---
+
+### 🎸 Prepare CHORDS and LYRICS — аккорды и тексты (с помощью дополнительной программы)
+
+Формирует данные из треков **Chords** и **Lyrics** для отображения в отдельном оптимизированном веб-интерфейсе через [reaper-ws-proxy](https://github.com/karamush/reaper-ws-proxy). Видеопримеры и параметры использования можно посмотреть там же.
+
+**Использование:**
+1. Создайте треки с именами `Chords` и `Lyrics`
+2. Добавьте элементы с текстом в комментарии
+3. Запустите скрипт — данные сохранятся в ExtState
+4. Используйте [reaper-ws-proxy](https://github.com/karamush/reaper-ws-proxy) для отображения
+
+---
+
+## ⌨️ Настройка горячих клавиш
+
+Для быстрого доступа к скриптам назначьте им горячие клавиши:
+
+1. Откройте **Actions** → **Show action list** (клавиша `?`)
+2. Найдите нужный скрипт (фильтр по имени)
+3. Нажмите **Add shortcut** → нажмите желаемую комбинацию
+
+**Примеры для LiveRecGroups:**
+| Действие | Рекомендованная клавиша |
+|----------|-------------------------|
+| Toggle Group 01 | `Ctrl+Alt+1` |
+| Toggle Group 02 | `Ctrl+Alt+2` |
+| Save to Group 01 | `Ctrl+Shift+1` |
+| Select Group 01 | `Alt+1` |
+
+---
+
+## 🛠️ Разработка
+
+### Изменение количества групп для LiveRecGroups
+
+Если недостаточно 12 групп для LiveRecGroups, то можно отредактировать их количество в файле tools/generate_wrappers.py, поменяв константу `GROUPS` на нужное количество, а затем запустив сам скрипт.
+
+```bash
+python Tracks/LiveRecGroups/tools/generate_wrappers.py
+```
+
+Скрипт автоматически удалит старые скрипты-экшны, сгенерирует новые, попутно обновив мета-информацию в пакетах.
+
+## 🤝 Вклад
+
+Приветствуются pull requests! Для крупных изменений сначала откройте issue для обсуждения.
+
+1. Fork проекта
+2. Создайте ветку (`git checkout -b feature/AmazingFeature`)
+3. Закоммитьте изменения (`git commit -m 'Add some AmazingFeature'`)
+4. Пушните в ветку (`git push origin feature/AmazingFeature`)
+5. Откройте Pull Request
+
+---
+
+## 📄 Лицензия
+
+Проект распространяется под лицензией **GPL v3**. См. файл [LICENSE](LICENSE) для деталей.
+
+---
+
+## 🔗 Ссылки
+
+- [REAPER](https://www.reaper.fm/) — основная DAW
+- [ReaPack](https://reapack.com/) — менеджер пакетов для скриптов
+- [reaper-ws-proxy](https://github.com/karamush/reaper-ws-proxy) — веб-интерфейс для текстов и аккордов
+- [Форум REAPER](https://forum.reaper.fm/) — сообщество и поддержка
+
+
+---
+
+<div align="center">
+
+**Нравится проект?** ⭐ Поставьте звезду на GitHub!
+
+[![GitHub Stars](https://img.shields.io/github/stars/karamush/REAPER-ReaScripts?style=social)](https://github.com/karamush/REAPER-ReaScripts/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/karamush/REAPER-ReaScripts)](https://github.com/karamush/REAPER-ReaScripts/issues)
+[![License](https://img.shields.io/github/license/karamush/REAPER-ReaScripts)](https://github.com/karamush/REAPER-ReaScripts/blob/main/LICENSE)
+
+</div>
