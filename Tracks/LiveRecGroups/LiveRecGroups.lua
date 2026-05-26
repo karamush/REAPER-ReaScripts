@@ -1,5 +1,5 @@
 -- @description LiveRecGroups
--- @version 1.0.0
+-- @version 1.0.1
 -- @author Karamush
 -- @about
 --    LiveRecGroups provides track grouping features for live recording/streaming in REAPER.
@@ -44,3 +44,14 @@
 --    [nomain] _lib/LiveRecGroups.lua
 
 -- This file is auto-generated.
+
+--[[
+  Changelog:
+* 1.0.0 (2026-05-25)
+  + Первый релиз. Основной функционал работает 🐧
+* 1.0.1 (2026-05-26)
+  + Показ списка сохранённых треков (чтоб убедиться ещё разок)
+  + Подтверждение при перезаписи не пустой группы
+  + Подтверждение при очистке группы
+  + Оповещение, если группа пуста и выбрано 0 треков :)
+]]

@@ -13,6 +13,7 @@ from textwrap import dedent
 BASE_DIR = Path(__file__).resolve().parents[1]
 LIB_DIR = BASE_DIR / "_lib"
 VERSION_FILE = BASE_DIR / "VERSION"
+CHANGELOG_FILE = BASE_DIR / "CHANGELOG"
 
 GROUPS = 12
 
@@ -169,18 +170,10 @@ local GROUP_ID = {group_id}
 
 reaper.Undo_BeginBlock()
 
-local count = LR.save_selected_tracks_to_group(GROUP_ID)
+LR.save_selected_tracks_to_group(GROUP_ID)
 
-reaper.Undo_EndBlock(
-    "Save selected tracks to LiveRecGroups",
-    -1
-)
-
-reaper.ShowConsoleMsg(
-    ("Saved %d track(s) to group %d\\n")
-    :format(count, GROUP_ID)
-)
-        """
+reaper.Undo_EndBlock("Save selected tracks to LiveRecGroups", -1)
+"""
     ).strip()
 
     return filename, content
@@ -220,18 +213,29 @@ def generate_main_package(wrapper_files: list[str]) -> str:
 
     provides.append("[nomain] _lib/LiveRecGroups.lua")
 
-    return dedent(
-        f"""
+    changelog = None
+    if CHANGELOG_FILE.exists():
+        changelog = CHANGELOG_FILE.read_text()
+
+    content = f"""
         {lua_header(
             PACKAGE_NAME,
             metapackage=True,
             provides=provides,
         )}
 
--- This file is auto-generated.
-        """
-    ).strip()
+-- This file is auto-generated."""
 
+    if changelog:
+        content += f"""
+        
+--[[
+  Changelog:
+{changelog}
+]]
+"""
+
+    return dedent(content).strip()
 
 # =========================================================
 # Library version patching

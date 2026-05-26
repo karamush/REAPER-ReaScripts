@@ -11,14 +11,6 @@ local GROUP_ID = 8
 
 reaper.Undo_BeginBlock()
 
-local count = LR.save_selected_tracks_to_group(GROUP_ID)
+LR.save_selected_tracks_to_group(GROUP_ID)
 
-reaper.Undo_EndBlock(
-    "Save selected tracks to LiveRecGroups",
-    -1
-)
-
-reaper.ShowConsoleMsg(
-    ("Saved %d track(s) to group %d\n")
-    :format(count, GROUP_ID)
-)
+reaper.Undo_EndBlock("Save selected tracks to LiveRecGroups", -1)
